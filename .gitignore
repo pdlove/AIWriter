@@ -141,3 +141,4 @@ vite.config.ts.timestamp-*
 # Ignore SQLite database files
 *.db
 *.sqlite
+frontend/package-lock.json

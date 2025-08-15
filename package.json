@@ -1,0 +1,15 @@
+{
+  "name": "aiwriter",
+  "version": "1.0.0",
+  "description": "AI Writer using Ollama and Carpenter",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "carpenter": "github:pdlove/node-carpenter#EarlyDevelopment",
+    "node-fetch": "^3.3.2",
+    "ollama": "^0.5.17"
+  }
+}

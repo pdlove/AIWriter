@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
+import { h, render } from '/vendor/preact/preact.mjs';
+import { useEffect, useState } from '/vendor/preact/hooks.mjs';
+
 
 function NarrativeTab({ sceneId, onSave, onLoad }) {
   const [narrative, setNarrative] = useState('');
@@ -183,18 +184,6 @@ Start writing your narrative here...
 
       {/* Content Area */}
       <div style={{ flex: 1, overflow: 'hidden' }}>
-        {isPreview ? (
-          <div style={{ 
-            height: '100%', 
-            overflow: 'auto', 
-            padding: '16px', 
-            background: '#f9fafb', 
-            border: '1px solid #e5e7eb', 
-            borderRadius: '6px' 
-          }}>
-            <ReactMarkdown>{narrative}</ReactMarkdown>
-          </div>
-        ) : (
           <textarea
             value={narrative}
             onChange={(e) => setNarrative(e.target.value)}
@@ -212,7 +201,6 @@ Start writing your narrative here...
               outline: 'none'
             }}
           />
-        )}
       </div>
 
       {/* Help Text */}

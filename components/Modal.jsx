@@ -1,5 +1,5 @@
-import React from 'react';
 
+import { h, render } from '/vendor/preact/preact.mjs';
 function Modal({ isOpen, onClose, title, children }) {
   if (!isOpen) return null;
 

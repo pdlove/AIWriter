@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { h, render } from '/vendor/preact/preact.mjs';
+import { useState } from '/vendor/preact/hooks.mjs';
 
 export default function CharacterCard({ character, generatePrompt }) {
   const [editing, setEditing] = useState(false);

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Modal from './Modal';
+import { h, render } from '/vendor/preact/preact.mjs';
+import { useEffect, useState } from '/vendor/preact/hooks.mjs';
+import Modal from './Modal.jsx';
 
 function SceneCharactersTab({ sceneId, masterCharacters = [], onSave }) {
   const [sceneCharacters, setSceneCharacters] = useState([]);

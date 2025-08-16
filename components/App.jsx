@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import SidebarMenu from './SidebarMenu';
-import NarrativeTab from './NarrativeTab';
-import SceneCharactersTab from './SceneCharactersTab';
+import { h, render } from '/vendor/preact/preact.mjs';
+import { useEffect, useState } from '/vendor/preact/hooks.mjs';
+import SidebarMenu from './SidebarMenu.jsx';
+import NarrativeTab from './NarrativeTab.jsx';
+import SceneCharactersTab from './SceneCharactersTab.jsx';
 
-function App() {
+export function App() {
   const [selected, setSelected] = useState({});
   const [activeSceneTab, setActiveSceneTab] = useState('Characters');
   const [masterCharacters, setMasterCharacters] = useState([]);
